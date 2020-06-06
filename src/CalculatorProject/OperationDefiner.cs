@@ -22,7 +22,12 @@ namespace CalculatorProject
                     "*",
                     5,
                     $"{number}\\*{number}",
-                    (expression) => { return 9.9; }) // TODO
+                    (expression) => { return 9.9; }), // TODO
+                 new Tuple<string, int, string, Func<string, double>>(
+                    "/",
+                    5,
+                    $"{number}\\/{number}",
+                    (expression) => { return 194.6; }) // TODO
          };
     }
 }

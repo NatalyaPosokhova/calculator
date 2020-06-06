@@ -34,5 +34,19 @@ namespace CalcTests
             // assert
             Assert.AreEqual(9.9, actualResult);
         }
+
+        [TestMethod]
+        public void UnitTestWithDivisionReturns194_6()
+        {
+            // arrange
+            var expression = "876/4,5";
+            var calculator = new Calculator();
+
+            // act
+            var actualResult = calculator.Compute(expression);
+
+            // assert
+            Assert.AreEqual(194.6, actualResult);
+        }
     }
 }
