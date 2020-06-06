@@ -1,5 +1,5 @@
---temp-output:C:\Users\NPosokhova\Documents\Visual Studio 2015\Projects\CalculatorProject\src\CalculatorProject\obj\Debug\netcoreapp1.0\
---out:C:\Users\NPosokhova\Documents\Visual Studio 2015\Projects\CalculatorProject\src\CalculatorProject\bin\Debug\netcoreapp1.0\CalculatorProject.dll
+--temp-output:C:\Users\NPosokhova\Documents\Projects\calculator\src\CalculatorProject\obj\Debug\netcoreapp1.0\
+--out:C:\Users\NPosokhova\Documents\Projects\calculator\src\CalculatorProject\bin\Debug\netcoreapp1.0\CalculatorProject.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -86,12 +86,11 @@
 --reference:C:\Users\NPosokhova\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\NPosokhova\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\NPosokhova\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
-C:\Users\NPosokhova\Documents\Visual Studio 2015\Projects\CalculatorProject\src\CalculatorProject\Calculator.cs
-C:\Users\NPosokhova\Documents\Visual Studio 2015\Projects\CalculatorProject\src\CalculatorProject\ICalculator.cs
-C:\Users\NPosokhova\Documents\Visual Studio 2015\Projects\CalculatorProject\src\CalculatorProject\IOperationDefiner.cs
-C:\Users\NPosokhova\Documents\Visual Studio 2015\Projects\CalculatorProject\src\CalculatorProject\IOperationPerformer.cs
-C:\Users\NPosokhova\Documents\Visual Studio 2015\Projects\CalculatorProject\src\CalculatorProject\OperationDefiner.cs
-C:\Users\NPosokhova\Documents\Visual Studio 2015\Projects\CalculatorProject\src\CalculatorProject\OperationPerformer.cs
-C:\Users\NPosokhova\Documents\Visual Studio 2015\Projects\CalculatorProject\src\CalculatorProject\Program.cs
-C:\Users\NPosokhova\Documents\Visual Studio 2015\Projects\CalculatorProject\src\CalculatorProject\Scrap.cs
-C:\Users\NPosokhova\Documents\Visual Studio 2015\Projects\CalculatorProject\src\CalculatorProject\Properties\AssemblyInfo.cs
+C:\Users\NPosokhova\Documents\Projects\calculator\src\CalculatorProject\Calculator.cs
+C:\Users\NPosokhova\Documents\Projects\calculator\src\CalculatorProject\ICalculator.cs
+C:\Users\NPosokhova\Documents\Projects\calculator\src\CalculatorProject\IOperationDefiner.cs
+C:\Users\NPosokhova\Documents\Projects\calculator\src\CalculatorProject\IOperationPerformer.cs
+C:\Users\NPosokhova\Documents\Projects\calculator\src\CalculatorProject\OperationDefiner.cs
+C:\Users\NPosokhova\Documents\Projects\calculator\src\CalculatorProject\OperationPerformer.cs
+C:\Users\NPosokhova\Documents\Projects\calculator\src\CalculatorProject\Program.cs
+C:\Users\NPosokhova\Documents\Projects\calculator\src\CalculatorProject\Properties\AssemblyInfo.cs

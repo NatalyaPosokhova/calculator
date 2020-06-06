@@ -7,3 +7,12 @@ C:\Users\NPosokhova\Documents\Visual Studio 2015\Projects\CalculatorProject\Calc
 C:\Users\NPosokhova\Documents\Visual Studio 2015\Projects\CalculatorProject\Calculator.Tests\bin\Debug\CalculatorProject.pdb
 C:\Users\NPosokhova\Documents\Visual Studio 2015\Projects\CalculatorProject\Calculator.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
 C:\Users\NPosokhova\Documents\Visual Studio 2015\Projects\CalculatorProject\Calculator.Tests\obj\Debug\CalcTests.csprojResolveAssemblyReference.cache
+C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\bin\Debug\Calculator.Tests.dll
+C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\bin\Debug\Calculator.Tests.pdb
+C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\bin\Debug\CalculatorProject.dll
+C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\bin\Debug\CalculatorProject.pdb
+C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\obj\Debug\CalcTests.csprojResolveAssemblyReference.cache
+C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\obj\Debug\Calculator.Tests.dll
+C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\obj\Debug\Calculator.Tests.pdb

@@ -22,6 +22,19 @@ namespace CalcTests
         }
 
         [TestMethod]
+        public void UnitTestWithSubtractionReturns65_8()
+        {
+            // arrange
+            var expression = "67.8-2";
+            var calculator = new Calculator();
+
+            // act
+            var actualResult = calculator.Compute(expression);
+
+            // assert
+            Assert.AreEqual(65.8, actualResult);
+        }
+        [TestMethod]
         public void UnitTestWithMultiplicationReturns9_9()
         {
             // arrange

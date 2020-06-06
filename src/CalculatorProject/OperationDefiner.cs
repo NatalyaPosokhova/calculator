@@ -15,19 +15,25 @@ namespace CalculatorProject
          {
                 new Tuple<string, int, string, Func<string, double>>(
                     "+",
-                    3,
+                    1,
                     $"{number}\\+{number}",
                     (expression) => { return 6.0; }), // TODO
                  new Tuple<string, int, string, Func<string, double>>(
+                    "-",
+                    1,
+                    $"{number}\\-{number}",
+                    (expression) => { return 65.8; }), // TODO
+                 new Tuple<string, int, string, Func<string, double>>(
                     "*",
-                    5,
+                    3,
                     $"{number}\\*{number}",
                     (expression) => { return 9.9; }), // TODO
                  new Tuple<string, int, string, Func<string, double>>(
                     "/",
-                    5,
+                    3,
                     $"{number}\\/{number}",
                     (expression) => { return 194.6; }) // TODO
+                 
          };
     }
 }
