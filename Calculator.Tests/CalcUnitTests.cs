@@ -8,17 +8,17 @@ namespace CalcTests
     public class CalcUnitTests
     {
         [TestMethod]
-        public void SimpleTestWithSumReturns6_0()
+        public void UnitTestWithSumReturns6_0()
         {
             // arrange
             var expression = "4+2";
             var calculator = new Calculator();
 
             // act
-            var result = calculator.Compute(expression);
+            var actualResult = calculator.Compute(expression);
 
             // assert
-            Assert.AreEqual(6.0, result);
+            Assert.AreEqual(6.0, actualResult);
         }
     }
 }

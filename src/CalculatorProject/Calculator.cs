@@ -9,7 +9,9 @@ namespace CalculatorProject
     {
         public double Compute(string expression)
         {
-            throw new NotImplementedException();
+            var operation = new OperationPerformer();
+            
+            return operation.CalcBracketLessExpression(expression); ;
         }
     }
 }
