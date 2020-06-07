@@ -1,18 +1,18 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CalculatorProject;
+
 
 namespace CalcTests
 {
     [TestClass]
-    public class CalcUnitTests
+    public class CalcSimpleUnitTests
     {
         [TestMethod]
         public void UnitTestWithSumReturns6_0()
         {
             // arrange
             var expression = "4+2";
-            var calculator = new Calculator();
+            var calculator = new CalculatorProject.Calculator();
 
             // act
             var actualResult = calculator.Compute(expression);
@@ -26,7 +26,7 @@ namespace CalcTests
         {
             // arrange
             var expression = "67.8-2";
-            var calculator = new Calculator();
+            var calculator = new CalculatorProject.Calculator();
 
             // act
             var actualResult = calculator.Compute(expression);
@@ -39,7 +39,7 @@ namespace CalcTests
         {
             // arrange
             var expression = "2,2*4,5";
-            var calculator = new Calculator();
+            var calculator = new CalculatorProject.Calculator();
 
             // act
             var actualResult = calculator.Compute(expression);
@@ -49,17 +49,17 @@ namespace CalcTests
         }
 
         [TestMethod]
-        public void UnitTestWithDivisionReturns194_6()
+        public void UnitTestWithDivisionReturns182_5()
         {
             // arrange
-            var expression = "876/4,5";
-            var calculator = new Calculator();
+            var expression = "876/4.8";
+            var calculator = new CalculatorProject.Calculator();
 
             // act
             var actualResult = calculator.Compute(expression);
 
             // assert
-            Assert.AreEqual(194.6, actualResult);
+            Assert.AreEqual(182.5, actualResult);
         }
     }
 }

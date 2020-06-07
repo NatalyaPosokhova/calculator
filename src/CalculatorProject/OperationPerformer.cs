@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -10,16 +11,21 @@ namespace CalculatorProject
     {
         public double CalcBracketLessExpression(string expressionBracketsLess)
         {
-            double result = 0.0;
+            var orderedOperationsList = OperationDefiner.Operations.OrderBy(op => op.Item2).Reverse().ToList();
 
-            for (int op = 0; op < OperationDefiner.Operations.Count; op++)
+            for (int op = 0; op < orderedOperationsList.Count; op++)
             {
-                if (Regex.IsMatch(expressionBracketsLess, OperationDefiner.Operations[op].Item3))
+                while (Regex.IsMatch(expressionBracketsLess, orderedOperationsList[op].Item3)) 
                 {
-                    result = OperationDefiner.Operations[op].Item4(expressionBracketsLess);
+                    var opExpression = Regex.Match(expressionBracketsLess, orderedOperationsList[op].Item3).Value;
+                    var opResult = orderedOperationsList[op].Item4(opExpression).ToString();
+
+                    var regex = new Regex(orderedOperationsList[op].Item3);
+                    expressionBracketsLess = regex.Replace(expressionBracketsLess, opResult, 1);
                 }
             }
-            return result;
+
+            return Convert.ToDouble(expressionBracketsLess);
         }
     }
 }

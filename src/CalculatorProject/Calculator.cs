@@ -11,7 +11,7 @@ namespace CalculatorProject
         {
             var operation = new OperationPerformer();
             
-            return operation.CalcBracketLessExpression(expression); ;
+            return operation.CalcBracketLessExpression(expression.Replace(" ", String.Empty)); 
         }
     }
 }
