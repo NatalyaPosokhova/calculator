@@ -51,6 +51,8 @@ namespace CalculatorProject
                     (opExpression) => 
                     {
                         List<double> numbersList = GetNumbers(opExpression, "\\/");
+                        if(numbersList[1] == 0)
+                        throw new DivideByZeroException();
                         return numbersList[0] / numbersList[1];
                     }) 
                  

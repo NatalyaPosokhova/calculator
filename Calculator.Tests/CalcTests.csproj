@@ -58,6 +58,7 @@
     <Compile Include="CalcSimpleUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CalcComplexUnitTests.cs" />
+    <Compile Include="CalcExceptionUnitTests.cs" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
