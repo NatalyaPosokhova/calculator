@@ -13,6 +13,9 @@ namespace CalculatorProject
         {
             expression = expression.Replace(" ", String.Empty).Replace(".", ",");
 
+            Validator validator = new Validator();
+            validator.BracketsQuantityChecker(expression);
+
             Parser parser = new Parser();
             OperationPerformer performer = new OperationPerformer();
 
