@@ -11,10 +11,11 @@ namespace CalculatorProject
     {
         public double Compute(string expression)
         {
-            expression = expression.Replace(" ", String.Empty).Replace(".", ",");
+            expression = expression.Replace(" ", String.Empty).Replace(".", ",").TrimEnd('=');
 
             Validator validator = new Validator();
             validator.BracketsQuantityChecker(expression);
+            validator.ExceededSymbolsChecker(expression);
 
             Parser parser = new Parser();
             OperationPerformer performer = new OperationPerformer();
@@ -26,7 +27,7 @@ namespace CalculatorProject
                 var localResult = performer.CalcBracketLessExpression(deeperBracketContent);
 
                 var sb = new StringBuilder(expression);
-                sb.Remove(startIndex, deeperBracketContent.Length + 2);
+                sb.Remove(startIndex, deeperBracketContent.Length + 2); 
                 sb.Insert(startIndex, localResult);
                 expression = sb.ToString();
             }

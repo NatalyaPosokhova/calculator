@@ -36,5 +36,20 @@ namespace Calculator.Tests
             Assert.IsInstanceOfType(actualResult, typeof(Exception));
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(Exception), "Entered expression contains exceeded symbols.")]
+        public void UnitTestExceededSymbolsException()
+        {
+            // arrange
+            var expression = "(7+8*&(9-5))?";
+            var calculator = new CalculatorProject.Calculator();
+
+            // act
+            var actualResult = calculator.Compute(expression);
+
+            // assert
+            Assert.IsInstanceOfType(actualResult, typeof(Exception));
+        }
+
     }
 }

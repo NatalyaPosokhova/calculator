@@ -8,5 +8,7 @@ namespace CalculatorProject
     interface IValidator
     {
         void BracketsQuantityChecker(string expression);
+
+        void ExceededSymbolsChecker(string expression);
     }
 }
