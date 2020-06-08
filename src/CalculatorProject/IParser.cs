@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace CalculatorProject
 {
-    interface IOperationPerformer
+    interface IParser
     {
-        string CalcBracketLessExpression(string expressionBracketsLess);
+        string FindDeeperBracketContent(string expression, out int index);
     }
 }

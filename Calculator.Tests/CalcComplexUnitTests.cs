@@ -19,5 +19,19 @@ namespace Calculator.Tests
             // assert
             Assert.AreEqual(45.0, actualResult);
         }
+
+        [TestMethod]
+        public void UnitTestWithBracketsReturnsMin1_4()
+        {
+            // arrange
+            var expression = "8.4+(6-7.8)-(9*(7-6)-1)";
+            var calculator = new CalculatorProject.Calculator();
+
+            // act
+            var actualResult = calculator.Compute(expression);
+
+            // assert
+            Assert.AreEqual(-1.4, actualResult);
+        }
     }
 }
