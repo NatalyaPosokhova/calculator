@@ -18,10 +18,26 @@ namespace CalculatorProject
 
         public void ExceededSymbolsChecker(string expression)
         {
-            Regex regex = new Regex("([А-Яа-я]|@|\"|\'|#|~|&|\\?)");
+            Regex regex = new Regex("([А-Яа-я]|@|\"|\'|:|#|~|&|\\?)");
             if (expression.Any(el => regex.IsMatch(el.ToString())))
             {
                 throw new Exception("Entered expression contains exceeded symbols.");
+            }
+        }
+
+        public void EmptyExpressionChecker(string expression)
+        {
+            if (String.IsNullOrEmpty(expression))
+            {
+                throw new Exception("Entered expression is empty.");
+            }
+        }
+
+        public void OverflowChecker(string expression)
+        {
+            if (expression.Length > 1000)
+            {
+                throw new OverflowException();
             }
         }
     }

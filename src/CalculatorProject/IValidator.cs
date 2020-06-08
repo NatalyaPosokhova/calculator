@@ -10,5 +10,9 @@ namespace CalculatorProject
         void BracketsQuantityChecker(string expression);
 
         void ExceededSymbolsChecker(string expression);
+
+        void EmptyExpressionChecker(string expression);
+
+        void OverflowChecker(string expression);
     }
 }

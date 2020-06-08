@@ -11,11 +11,13 @@ namespace CalculatorProject
     {
         public double Compute(string expression)
         {
-            expression = expression.Replace(" ", String.Empty).Replace(".", ",").TrimEnd('=');
-
             Validator validator = new Validator();
+            validator.EmptyExpressionChecker(expression);
+            validator.OverflowChecker(expression);
             validator.BracketsQuantityChecker(expression);
             validator.ExceededSymbolsChecker(expression);
+
+            expression = expression.Replace(" ", String.Empty).Replace(".", ",").TrimEnd('=');
 
             Parser parser = new Parser();
             OperationPerformer performer = new OperationPerformer();

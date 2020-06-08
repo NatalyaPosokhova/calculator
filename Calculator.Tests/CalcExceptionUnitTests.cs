@@ -51,5 +51,47 @@ namespace Calculator.Tests
             Assert.IsInstanceOfType(actualResult, typeof(Exception));
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(Exception), "Entered expression is empty.")]
+        public void UnitTestEmptyExpressionException()
+        {
+            // arrange
+            var expression = "";
+            var calculator = new CalculatorProject.Calculator();
+
+            // act
+            var actualResult = calculator.Compute(expression);
+
+            // assert
+            Assert.IsInstanceOfType(actualResult, typeof(Exception));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(OverflowException))]
+        public void UnitTestOverflowException()
+        {
+            // arrange
+            Random rand = new Random();
+            string[] operators = { "+", "-", "*", "/"};
+            
+            var expression = "";
+
+            for (int i = 0; i < 501; i++)
+            {
+                string randomOperator = operators[rand.Next(operators.Length)];
+                var randomNumber = rand.Next(-1000, 1000);
+
+                expression += $"{randomNumber.ToString()}{randomOperator}-1";
+            }
+          
+            var calculator = new CalculatorProject.Calculator();
+
+            // act
+            var actualResult = calculator.Compute(expression);
+
+            // assert
+            Assert.IsInstanceOfType(actualResult, typeof(Exception));
+        }
+
     }
 }
