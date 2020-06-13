@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CalculatorProject;
 
 namespace Calculator.Tests
 {
@@ -22,52 +23,48 @@ namespace Calculator.Tests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception), "Opened and Closed brackets' quantity is not equal.")]
         public void UnitTestDifferentBracketsQuantityException()
         {
             // arrange
             var expression = "(7+8*(9-5)))";
-            var calculator = new CalculatorProject.Calculator();
-
+            var validator = new ExpressionValidator();
+       
             // act
-            var actualResult = calculator.Compute(expression);
+            var actualResult = validator.Validate(expression);
 
             // assert
-            Assert.IsInstanceOfType(actualResult, typeof(Exception));
+            Assert.AreEqual(actualResult, validator.ErrorBracketsQuantity);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception), "Entered expression contains exceeded symbols.")]
         public void UnitTestExceededSymbolsException()
         {
             // arrange
             var expression = "(7+8*&(9-5))?";
-            var calculator = new CalculatorProject.Calculator();
+            var validator = new ExpressionValidator();
 
             // act
-            var actualResult = calculator.Compute(expression);
+            var actualResult = validator.Validate(expression);
 
             // assert
-            Assert.IsInstanceOfType(actualResult, typeof(Exception));
+            Assert.AreEqual(actualResult, validator.ErrorExceededSymbols);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception), "Entered expression is empty.")]
         public void UnitTestEmptyExpressionException()
         {
             // arrange
             var expression = "";
-            var calculator = new CalculatorProject.Calculator();
+            var validator = new ExpressionValidator();
 
             // act
-            var actualResult = calculator.Compute(expression);
+            var actualResult = validator.Validate(expression);
 
             // assert
-            Assert.IsInstanceOfType(actualResult, typeof(Exception));
+            Assert.AreEqual(actualResult, validator.ErrorEmpty);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(OverflowException))]
         public void UnitTestOverflowException()
         {
             // arrange
@@ -83,15 +80,14 @@ namespace Calculator.Tests
 
                 expression += $"{randomNumber.ToString()}{randomOperator}-1";
             }
-          
-            var calculator = new CalculatorProject.Calculator();
+
+            var validator = new ExpressionValidator();
 
             // act
-            var actualResult = calculator.Compute(expression);
+            var actualResult = validator.Validate(expression);
 
             // assert
-            Assert.IsInstanceOfType(actualResult, typeof(Exception));
+            Assert.AreEqual(actualResult, validator.ErrorTooLong);
         }
-
     }
 }

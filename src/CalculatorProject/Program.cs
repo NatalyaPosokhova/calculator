@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CalculatorProject
 {
@@ -10,15 +7,21 @@ namespace CalculatorProject
         public static void Main(string[] args)
         {
             Console.WriteLine("Enter expression: ");
-
             var expression = Console.ReadLine();
 
-            var calculator = new Calculator();
+            IExpressionValidator validator = new ExpressionValidator();
+            var validationResult = validator.Validate(expression);
+            if (validationResult != null)
+            {
+                Console.WriteLine(validationResult);
+                Console.ReadKey();
+                return;
+            }
 
+            var calculator = new Calculator();
             var result = calculator.Compute(expression);
 
             Console.WriteLine($"Result: {result}");
-
             Console.ReadKey();
         }
     }
