@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CalculatorProject
 {
-    interface IOperationDefiner
+    public interface IOperationsDefiner
     {
         
     }
