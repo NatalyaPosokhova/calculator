@@ -10,7 +10,13 @@ namespace Calculator.Tests
         {
             // arrange
             var expression = "42+5.2-2*5.5/5";
-            var calculator = new CalculatorProject.Calculator();
+
+            var corrector = new CalculatorProject.ExpressionCorrector();
+            expression = corrector.Correct(expression);
+
+            var calculator = new CalculatorProject.Calculator(
+                new CalculatorProject.Parser(), 
+                new CalculatorProject.OperationPerformer());
 
             // act
             var actualResult = calculator.Compute(expression);
@@ -24,7 +30,13 @@ namespace Calculator.Tests
         {
             // arrange
             var expression = "8.4+(6-7.8)-(9*(7-6)-1)";
-            var calculator = new CalculatorProject.Calculator();
+
+            var corrector = new CalculatorProject.ExpressionCorrector();
+            expression = corrector.Correct(expression);
+
+            var calculator = new CalculatorProject.Calculator(
+                new CalculatorProject.Parser(),
+                new CalculatorProject.OperationPerformer());
 
             // act
             var actualResult = calculator.Compute(expression);

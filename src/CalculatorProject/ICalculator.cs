@@ -1,6 +1,6 @@
 ﻿namespace CalculatorProject
 {
-    interface ICalculator
+    public interface ICalculator
     {
         double Compute(string expression);
     }

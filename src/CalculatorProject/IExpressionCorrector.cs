@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CalculatorProject
 {
-    interface IExpressionCorrector
+    public interface IExpressionCorrector
     {
         string Correct(string expression);
     }

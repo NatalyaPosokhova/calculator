@@ -13,7 +13,13 @@ namespace Calculator.Tests
         {
             // arrange
             var expression = "6.7/0.0";
-            var calculator = new CalculatorProject.Calculator();
+
+            var corrector = new CalculatorProject.ExpressionCorrector();
+            expression = corrector.Correct(expression);
+
+            var calculator = new CalculatorProject.Calculator(
+                new Parser(),
+                new OperationPerformer());
 
             // act
             var actualResult = calculator.Compute(expression);

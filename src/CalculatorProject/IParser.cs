@@ -1,6 +1,6 @@
 ﻿namespace CalculatorProject
 {
-    interface IParser
+    public interface IParser
     {
         string FindDeeperBracketContent(string expression, out int index);
     }

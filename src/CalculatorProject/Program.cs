@@ -21,7 +21,7 @@ namespace CalculatorProject
             IExpressionCorrector corrector = new ExpressionCorrector();
             expression = corrector.Correct(expression);
 
-            var calculator = new Calculator();
+            ICalculator calculator = new Calculator(new Parser(), new OperationPerformer());
             var result = calculator.Compute(expression);
 
             Console.WriteLine($"Result: {result}");

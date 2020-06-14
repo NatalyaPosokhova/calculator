@@ -1,6 +1,6 @@
 ﻿namespace CalculatorProject
 {
-    interface IOperationPerformer
+    public interface IOperationPerformer
     {
         string CalcBracketLessExpression(string expressionBracketsLess);
     }

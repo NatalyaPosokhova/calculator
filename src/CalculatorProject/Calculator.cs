@@ -5,16 +5,23 @@ namespace CalculatorProject
 {
     public class Calculator : ICalculator
     {
+        private readonly IParser parser;
+
+        private readonly IOperationPerformer performer;
+
+        public Calculator(IParser parser_, IOperationPerformer performer_)
+        {
+            this.parser = parser_;
+            this.performer = performer_;
+        }
+
         public double Compute(string expression)
         {
-            Parser parser = new Parser();
-            OperationPerformer performer = new OperationPerformer();
-
             while (expression.Contains(")"))
             {
                 int startIndex;
-                var deeperBracketContent = parser.FindDeeperBracketContent(expression, out startIndex);
-                var localResult = performer.CalcBracketLessExpression(deeperBracketContent);
+                var deeperBracketContent = this.parser.FindDeeperBracketContent(expression, out startIndex);
+                var localResult = this.performer.CalcBracketLessExpression(deeperBracketContent);
 
                 var sb = new StringBuilder(expression);
                 sb.Remove(startIndex, deeperBracketContent.Length + 2);
