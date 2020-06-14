@@ -18,6 +18,9 @@ namespace CalculatorProject
                 return;
             }
 
+            IExpressionCorrector corrector = new ExpressionCorrector();
+            expression = corrector.Correct(expression);
+
             var calculator = new Calculator();
             var result = calculator.Compute(expression);
 

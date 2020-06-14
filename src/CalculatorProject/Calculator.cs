@@ -7,8 +7,6 @@ namespace CalculatorProject
     {
         public double Compute(string expression)
         {
-            expression = expression.Replace(" ", String.Empty).Replace(".", ",").TrimEnd('=');
-
             Parser parser = new Parser();
             OperationPerformer performer = new OperationPerformer();
 
