@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CalculatorProject;
 
-namespace Calculator.Tests
+namespace CalcTests
 {
     [TestClass]
     public class CalcExceptionUnitTests
@@ -14,10 +14,10 @@ namespace Calculator.Tests
             // arrange
             var expression = "6.7/0.0";
 
-            var corrector = new CalculatorProject.ExpressionCorrector();
+            var corrector = new ExpressionCorrector();
             expression = corrector.Correct(expression);
 
-            var calculator = new CalculatorProject.Calculator(
+            var calculator = new Calculator(
                 new Parser(),
                 new OperationPerformer());
 

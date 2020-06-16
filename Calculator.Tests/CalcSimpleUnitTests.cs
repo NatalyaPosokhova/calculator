@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using CalculatorProject;
 
 namespace CalcTests
 {
@@ -12,9 +12,9 @@ namespace CalcTests
         {
             // arrange
             var expression = "4+2";
-            var calculator = new CalculatorProject.Calculator(
-                new CalculatorProject.Parser(),
-                new CalculatorProject.OperationPerformer());
+            var calculator = new Calculator(
+                new Parser(),
+                new OperationPerformer());
 
             // act
             var actualResult = calculator.Compute(expression);
@@ -32,9 +32,9 @@ namespace CalcTests
             var corrector = new CalculatorProject.ExpressionCorrector();
             expression = corrector.Correct(expression);
 
-            var calculator = new CalculatorProject.Calculator(
-                new CalculatorProject.Parser(),
-                new CalculatorProject.OperationPerformer());
+            var calculator = new Calculator(
+                new Parser(),
+                new OperationPerformer());
 
             // act
             var actualResult = calculator.Compute(expression);
@@ -47,9 +47,9 @@ namespace CalcTests
         {
             // arrange
             var expression = "2,2*4,5";
-            var calculator = new CalculatorProject.Calculator(
-                new CalculatorProject.Parser(),
-                new CalculatorProject.OperationPerformer());
+            var calculator = new Calculator(
+                new Parser(),
+                new OperationPerformer());
 
             // act
             var actualResult = calculator.Compute(expression);
@@ -67,9 +67,9 @@ namespace CalcTests
             var corrector = new CalculatorProject.ExpressionCorrector();
             expression = corrector.Correct(expression);
 
-            var calculator = new CalculatorProject.Calculator(
-                new CalculatorProject.Parser(),
-                new CalculatorProject.OperationPerformer());
+            var calculator = new Calculator(
+                new Parser(),
+                new OperationPerformer());
 
             // act
             var actualResult = calculator.Compute(expression);

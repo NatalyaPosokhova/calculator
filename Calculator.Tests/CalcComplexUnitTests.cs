@@ -1,6 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using CalculatorProject;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Calculator.Tests
+namespace CalcTests
 {
     [TestClass]
     public class CalcComplexUnitTests
@@ -15,8 +16,8 @@ namespace Calculator.Tests
             expression = corrector.Correct(expression);
 
             var calculator = new CalculatorProject.Calculator(
-                new CalculatorProject.Parser(), 
-                new CalculatorProject.OperationPerformer());
+                new Parser(), 
+                new OperationPerformer());
 
             // act
             var actualResult = calculator.Compute(expression);
@@ -35,8 +36,8 @@ namespace Calculator.Tests
             expression = corrector.Correct(expression);
 
             var calculator = new CalculatorProject.Calculator(
-                new CalculatorProject.Parser(),
-                new CalculatorProject.OperationPerformer());
+                new Parser(),
+                new OperationPerformer());
 
             // act
             var actualResult = calculator.Compute(expression);
