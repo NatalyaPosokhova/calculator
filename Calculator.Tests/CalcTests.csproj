@@ -82,6 +82,7 @@
     <Compile Include="CalcExceptionUnitTests.cs" />
     <Compile Include="ParserTest.cs" />
     <Compile Include="CalculatorTest.cs" />
+    <Compile Include="OperationPerformerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
