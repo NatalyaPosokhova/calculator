@@ -18,7 +18,7 @@ namespace CalcTests
             var actualResult = validator.Validate(expression);
 
             // assert
-            Assert.AreEqual(actualResult, validator.ErrorBracketsQuantity);
+            Assert.AreEqual(validator.ErrorBracketsQuantity, actualResult);
         }
 
         [TestMethod]
@@ -32,7 +32,7 @@ namespace CalcTests
             var actualResult = validator.Validate(expression);
 
             // assert
-            Assert.AreEqual(actualResult, validator.ErrorExceededSymbols);
+            Assert.AreEqual(validator.ErrorExceededSymbols, actualResult);
         }
 
         [TestMethod]
@@ -46,7 +46,7 @@ namespace CalcTests
             var actualResult = validator.Validate(expression);
 
             // assert
-            Assert.AreEqual(actualResult, validator.ErrorEmpty);
+            Assert.AreEqual(validator.ErrorEmpty, actualResult);
         }
 
         [TestMethod]
@@ -72,7 +72,7 @@ namespace CalcTests
             var actualResult = validator.Validate(expression);
 
             // assert
-            Assert.AreEqual(actualResult, validator.ErrorTooLong);
+            Assert.AreEqual(validator.ErrorTooLong, actualResult);
         }
     }
 }
