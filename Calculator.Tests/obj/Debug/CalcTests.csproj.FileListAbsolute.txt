@@ -13,7 +13,6 @@ C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\bin\Debug\Cal
 C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\bin\Debug\CalculatorProject.pdb
 C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\obj\Debug\Calculator.Tests.dll
 C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\obj\Debug\Calculator.Tests.pdb
-C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\obj\Debug\CalcTests.csprojResolveAssemblyReference.cache
 C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\bin\Debug\Castle.Core.dll
 C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\bin\Debug\Moq.dll
 C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
@@ -22,3 +21,4 @@ C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\bin\Debug\Cas
 C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\bin\Debug\Moq.xml
 C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\NPosokhova\Documents\Projects\calculator\Calculator.Tests\obj\Debug\CalcTests.csprojResolveAssemblyReference.cache

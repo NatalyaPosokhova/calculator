@@ -85,6 +85,7 @@
     <Compile Include="OperationPerformerTest.cs" />
     <Compile Include="ExpressionValidatorTest.cs" />
     <Compile Include="ExpressionCorrectorTest.cs" />
+    <Compile Include="OperationsDefinerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
