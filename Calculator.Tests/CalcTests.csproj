@@ -84,6 +84,7 @@
     <Compile Include="CalculatorTest.cs" />
     <Compile Include="OperationPerformerTest.cs" />
     <Compile Include="ExpressionValidatorTest.cs" />
+    <Compile Include="ExpressionCorrectorTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
